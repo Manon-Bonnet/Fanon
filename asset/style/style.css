@@ -1,0 +1,585 @@
+/* ______________________________POLICES_______________________________*/
+@font-face {
+  font-family: "RuslanDisplay";
+  src: url("../font/ruslan/ruslan_display.woff2") format("woff2"),
+      url("../font/ruslan/ruslan_display.woff") format("woff");
+}
+
+/*_____________________Général_______________________________________*/
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.btnclassique{
+  background-color:#ffd400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+.btnclassique:hover{
+  background-color: white;
+  color: #ffd400;
+  text-decoration: none;
+  border: solid 2px #ffd400;
+}
+.ariane{
+  display: flex;
+  margin: 20px;
+}
+h1,h2,h3{
+  text-transform: uppercase;
+}
+
+/*____________________Header_____________________________________*/
+nav a {
+  color: black;
+}
+.panier{
+  display: flex;
+}
+nav a span {
+  min-width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffd400;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+.logo{
+  font-family: "RuslanDisplay";
+  text-decoration: none;
+  color: #ffd400;
+  display: none;
+  position: absolute;
+  left: 70px;
+  font-size: 1.5rem;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  color: #ffd400;
+}
+.logout-icon{
+  vertical-align: baseline;
+}
+.nav-link:active {
+  text-decoration: underline;
+  color: #ffd400;
+}
+header{
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  min-height: 10vh;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px grey;
+  z-index: 5;
+}
+
+ /*____________________Page index_____________________________________*/
+.hero-full-image{
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url("../img/herofullimage.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.hero-full-image h1{
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-family: "RuslanDisplay";
+}
+.nosproduits{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+}
+.nosproduits h2{
+  padding-bottom: 5vh;
+}
+.troisarticles h3{
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 2vw;
+  margin: 10px;
+}
+.troisarticles{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.troisarticles article{
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffd400;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  margin: 30px;
+}
+.troisarticles img{
+  width: 100%;
+  border-radius: 10px;
+}
+.troisarticles figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.troisarticles figcaption{
+  width: 100%;
+  background-color: #ffd400;
+}
+
+/*____________________Formulaires en général_____________________________________*/
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.sectformulaire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  justify-content: center;
+}
+.sectformulaire input{
+  margin: 2vh 0;
+}
+/* Personnalisation des espaces d'écriture input*/
+input[type="text"], 
+input[type="password"], 
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+input[type="float"],
+textarea{
+  padding-left: 15px;
+  border-radius: 0;
+  border-width: 1px;
+  color:  #4e4f55;
+  border-style: solid;
+  border-color: #d6d3cc;
+}
+/* Personnalisation du bouton d'envoie*/
+input[type=submit], button{
+  background-color:#ffd400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+input[type=submit]:hover{
+  background-color:white;
+  color: #ffd400;
+  border: solid 2px #ffd400;
+}
+
+/* Personnalisation des espaces d'écriture input et textarea lorqu'ils sont selectionnés*/
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus{
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffd400;
+  outline: none;
+}
+/* Personnalisation de toutes mes entrées dans mon formulaire*/
+.filter {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  border: 1px solid lightblue;
+} 
+/* Lorsque un élément de mon formulaire est selectionné, le span jusqu'a présent caché apparait*/
+.filter:focus ~ .placeholder,
+.filter:valid ~ .placeholder {
+  display: block;
+}
+/* Personnalisation des espaces entre le texte et le bord de le section d'entrée de saisie et de sa taille */
+input{
+  margin-top: 20px;
+  height: 40px;
+}
+.sectformulaire .alink{
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+}
+.undo-modify{
+  margin-bottom: 10px;
+}
+
+/*____________________Page inscription_____________________________________*/
+.deuxparties{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.partiesformulaire{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.civilite{
+  margin-bottom: 0px;
+}
+.divcivilite{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.btnradio{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.btnradio div{
+  display: flex;
+  align-items: center;
+}
+.btnradio div input{
+  margin-right: 2vh;
+}
+
+/*____________________Page profil_____________________________________*/
+
+.formulaireprofil{
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  max-width: 500px;
+}
+.formulaireprofil li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px solid #d6d3cc;
+}
+.hidden{
+  display: none;
+}
+/*____________________Page Admin_______________________________________*/
+.admin-profil-part{
+  margin-top: 30px;
+  width: 100%;
+}
+.admin-profil-part h2{
+  text-align: center;
+}
+.article-profil-parent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.admin-produit{
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.add-produit-form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.admin-titles{
+  margin: 50px 0 20px 0;
+}
+.drop-space{
+  width: 100%;
+  height: 200px;
+  background-color: beige;
+  margin-top: 20px;
+}
+.drag-n-drop-text{
+  text-align: center;
+}
+.img-drop{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img-drop-more{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-view{
+  height: 150px;
+}
+.add-new-product-section{
+  width: 90%;
+  margin: auto;
+}
+.image-preview{
+  display: flex;
+  justify-content: space-around;
+}
+.input-produit{
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+/*____________________Page panier_____________________________________*/
+.sectionar{
+  min-height: 60vh;
+}
+.panier-liste, .panier-total{
+  width: 80%;
+  margin: auto;
+  padding: 0;
+}
+.panier-produit{
+  display: flex;
+  flex-direction: column;
+}
+.panier-produit img{
+  width: 100%;
+  height: 20vh;
+  order: -1;
+  object-fit: cover;
+}
+.panier-quantite{
+  display: flex;
+}
+.panier-quantite *{
+  height: 40px;
+  margin-top: 20px;
+}
+.quantitemodif{
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffd400;
+  color: white;
+}
+.quantitemodif:hover{
+  color: #ffd400;
+  background-color: white;
+  text-decoration: none;
+  border: 1px solid #ffd400;
+}
+.panier-quantite p{
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #ffd400;
+  width: 40px;
+}
+.sectionpanier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 65vh;
+  justify-content: center;
+}
+.supression_produit{
+  margin-top:20px;
+  margin-left:50px;
+}
+
+/*____________________Page produit_____________________________________*/
+.produit-header{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.main_produit_img{
+  object-fit: cover;
+  width: 60%;
+}
+.second_produit_img{
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.second_produit_img:hover{
+  cursor: pointer;
+  filter: brightness(0.4);
+}
+.images-produit{
+  order: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*____________________footer_____________________________________*/
+footer{
+  min-height: 20vh;
+  background-color: #ffd400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listefooter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.listefooter div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer ul{
+  list-style: none;
+  padding-left: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+footer ul a {
+  text-decoration: none;
+  color: black;
+}
+footer ul a:hover {
+  text-decoration: none;
+  color: gray;
+}
+footer h4, footer p{
+  margin-top: 8vh;
+}
+
+/*___________________Page paiment_____________________________________*/
+.sectionpayment{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.sectionpayment h1{
+  width: 100%;
+}
+.sectionpayment section{
+  border: 1px solid;
+  padding: 5vh;
+  margin-bottom: 10vh;
+}
+.produitpayement{
+  display: flex;
+  flex-wrap: wrap;
+}
+.produitpayement .soustotal{
+  width: 100%;
+}
+
+/*____________________Responsive_____________________________________*/
+
+@media (min-width:650px){
+  .admin-produit{
+    width: 30%;
+  }
+  .logo{
+    display: block;
+  }
+  .hero-full-image h1, .hero-full-image a{
+    margin-left: 15%;
+  }
+  .hero-full-image{
+    align-items: flex-start;
+  }
+  .partiesformulaire{
+    width: 47%;
+  }
+  .formulaireinscription{
+    width: 60%;
+  }
+  .premierepartie{
+    margin-right: 2.5%;
+  }
+  .deuxiemepartie{
+    margin-left: 2.5%;
+  }
+  .formulaireconexion, .formulairemdp{
+    width: 40%;
+  }
+  .divcivilite{
+    flex-direction: row;
+  }
+  .btnradio {
+    width: 50%;
+  }
+  footer ul{
+    margin-top: 2vh;
+  }
+  .listefooter{
+    flex-wrap: wrap;
+    flex-direction: initial;
+  }
+  .panier-liste, .panier-total{
+    width: 60%;
+    max-width: 700px;
+  }
+  .panier-produit{
+    flex-direction: row;
+  }
+  .panier-produit img{
+    width: 20vw;
+    max-width: 200px;
+    height: 20vw;
+    max-height: 200px;
+  }
+  .produit-header{
+    flex-direction: row;
+  }
+  .images-produit{
+    margin-right: 20px;
+    width: 50%;
+  }
+  .add-new-product-section{
+    width: 70%;
+  }
+  footer p{
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+  }
+}
+@media (min-width: 1000px){
+  .add-new-product-section{
+    width: 50%;
+  }
+}

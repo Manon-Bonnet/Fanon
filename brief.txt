@@ -1,0 +1,93 @@
+- organisation : 
+    - git 
+    - trello 
+
+
+- 10h15 : binôme 
+- 14 avril => PROJET FINI (tirage aléatoire)
+
+- projet back : 
+    - front office & back office 
+
+    -> e-commerce (au minimum 3 articles)
+    -> thématique : exemple : hightech 
+        -> telephone 
+        -> ordinateur 
+        -> téléviseur 
+
+        -> thématique : exemple : virus 
+        -> ebola 
+        -> peste 
+        -> covid     
+
+    -> gestion des stocks 
+    -> appliquer un panier (sans paiement)
+    -> gérer les tarifs 
+    -> fiche produit : 
+        -> min 3 photos 
+        -> prix 
+        -> stock 
+        -> tarif
+
+    -> session : 
+        -> simple visiteur (non-connecté NO SESSION)
+        -> membre connecté (connecté SESSION membre)
+        -> administrateur (connecté SESSION admin)
+
+    -> formulaire inscription : 
+        - pseudo (unique)
+        - mdp 
+            - 1 chiffre
+            - 1 lettre minuscule 
+            - 1 lettre majuscule 
+            - 1 caractère spécial [$%?!] 
+            - entre 10 et 20 caractères 
+            - mdp crypté cf. password_hash()
+        - confirmation de mdp
+        - email : 
+            - filter_var()
+            - m'isoler les email poubelles 
+        - civilité (mme / m / autre)
+        - adresse postale 
+        - tel : 
+            - longueur === 10
+            - filter_var()
+    -> nombre de pages : 
+        -> page d'accueil : 
+            -> tous les produits 
+        -> page d'inscription 
+        -> page panier 
+        -> fiche produit
+        -> fiche profil : 
+            -> informations sur les utilisateurs 
+            -> <h2>Vous êtes simple membre</h2>
+            -> <h2>Vous êtes administrateur</h2>
+            -> pour y accéder : formulaire de connexion : 
+                -> pseudo 
+                -> mdp
+    notation : 
+        - mise en ligne : 19 mars (1pt)
+            - sous-domaine 
+            - hébergement gratuit : 
+                -> https://infinityfree.net/
+                -> https://fr.000webhost.com/
+
+        - html-css : 19 mars (5pts)
+            - sémantique 1pt 
+            - accessibilité 1pt  
+            - validité html css 2pts  
+            - adaptation (responsive) 1pt 
+        
+        - php - sql : 14 avril (14pts)
+            - 1 question technique ou générale 1pt
+            - php  : 
+                - propreté et indentation 
+                - commentaires et annotations 
+                - optimisation du code 
+                - sécurité : cryptage / méthodes sur la préparation / Url etc. 
+            - sql : 
+                - validité du typage 
+                - optimisation des tables 
+                - bonnes pratiques 
+                - contraintes 
+                - performances 
